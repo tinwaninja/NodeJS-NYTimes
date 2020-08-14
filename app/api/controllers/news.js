@@ -1,20 +1,20 @@
-const newsModel = require('../models/news');
+const { News }  = require('../models/news');
 
 module.exports = {
     getAll: function(req, res, next) {
-        let newssList = [];
-
-        newsModel.News({}, function(err, newss) {
-            if (err)
-                next(err);
-            else
-                /*for (let news of newss) {
-                    newssList.push({
-                        headline: news.response.docs.headline.main,
-                    });
-                }*/
-                console.log(newss)
-                //res.json({status: "success", message: "newss list found.", data: {newss: newss}});
-        });
+        (async function () {
+        let newsList = [];
+        const newsData = await News();
+        let newsDataDocs = newsData.response.docs;
+        for (let news of newsDataDocs) {
+            newsList.push({
+                title: news.headline.main,
+                abstract: news.abstract,
+                pub_date: news.pub_date,
+            })
+        }
+        res.json({status: "error", message: "", data:newsList});
+            
+        })();
     },
 }
