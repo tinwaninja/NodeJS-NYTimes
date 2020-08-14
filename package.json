@@ -1,0 +1,23 @@
+{
+  "name": "nytimes",
+  "version": "1.0.0",
+  "description": "wahyu",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "request": "^2.88.2",
+    "sequelize": "^6.3.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "news"
+  ],
+  "author": "wahyu",
+  "license": "ISC"
+}
