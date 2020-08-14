@@ -12,4 +12,14 @@ async function News(){
      }
 }
 
-module.exports = {News}
+async function CariNews(nama,tipe = 'newest'){
+    try {
+       const res = await axios.get(url+'&q='+nama+'&sort='+tipe);
+       return res.data;
+    }
+   catch(err) {
+        return err;
+   }
+}
+
+module.exports = {News,CariNews}
