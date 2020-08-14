@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-let API = 'T7E7Y9osIcoIwtz7k2rYwUy5GSXlPXUA';
+let API = '697XCBWcoR9ntBG5c0KRdNC47mYxAfgz';
 let url='https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key='+API;
 async function News(){
       try {

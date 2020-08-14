@@ -34,7 +34,6 @@ module.exports = {
         for (let news of newsDataDocs) {
             let newsListMedia = [];
             for (let newsmedia of news.multimedia) {
-                console.log(newsmedia);
                 newsListMedia.push({
                     subtype: newsmedia.subtype,
                     url: newsmedia.url,
@@ -47,7 +46,7 @@ module.exports = {
                 image: newsListMedia,
             })
         }
-        res.json({status: "success", message: "news found.", data:newsList});
+        res.json({status: "success", message: "news ditemukan.", data:newsList});
 
         })();
     },

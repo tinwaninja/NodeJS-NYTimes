@@ -2,6 +2,7 @@
 
 const express = require('express');
 const newsRouter = require('./routes/news');
+const booksRouter = require('./routes/books');
 const app = express();
 
 app.get('/', function(req, res) {
@@ -9,7 +10,7 @@ app.get('/', function(req, res) {
 });
 
 app.use('/news', newsRouter);
-
+app.use('/books', booksRouter);
 
 app.listen(3000, function() {
     console.log('Listening on localhost:3000');
