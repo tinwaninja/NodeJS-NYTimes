@@ -22,7 +22,7 @@ module.exports = {
                 image: newsListMedia,
             })
         }
-        res.json({status: "success", message: "news found.", data:newsList});
+        res.json({status: "success", message: "news ditemukan.", data:newsList});
             
         })();
     },
