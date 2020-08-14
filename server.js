@@ -1,7 +1,16 @@
 'use strict'
 
 const express = require('express');
-const news = require('./routes/news');
-const books = require('./routes/books');
-const bodyParser =require('body-parser');
+const newsRouter = require('./routes/news');
+const app = express();
 
+app.get('/', function(req, res) {
+    res.json({"message" : "Simple REST API with Node.js"});
+});
+
+app.use('/news', newsRouter);
+
+
+app.listen(3000, function() {
+    console.log('Listening on localhost:3000');
+});
